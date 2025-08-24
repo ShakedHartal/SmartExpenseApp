@@ -6,6 +6,7 @@ import { db } from '../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import AppButton from '../components/AppButton'
 import {theme} from '../components/theme'
+import { GOOGLE_API_KEY } from '@env'
 
 export default function ScanReceiptScreen() {
   const [image, setImage] = useState(null);
@@ -76,8 +77,7 @@ export default function ScanReceiptScreen() {
         ],
       };
 
-      const response = await fetch(
-        'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDJcvOlxWWOfpj624LFaeH75991I44OCi8',
+      const response = await fetch(GOOGLE_API_KEY,        
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
