@@ -31,10 +31,12 @@ Smart Expense Manager is a mobile app built with React Native that helps users t
 ```bash
 git clone https://github.com/yourusername/smart-expense-manager.git
 cd smart-expense-manager
+```
 
 ### 2. Install dependencies:
 ```bash
 npm install
+```
 
 ### 3. Set up your environment:
 Create a .env file with the following:
@@ -43,36 +45,32 @@ Create a .env file with the following:
 FIREBASE_API_KEY=your_firebase_key
 OPENAI_API_KEY=your_openai_key
 GOOGLE_API_KEY=your_googleapi_key
-Make sure you have expo-cli installed globally:
-
-```bash
-npm install -g expo-cli
+```
 
 ### 4. Start the app:
 ```bash
 npm expo start
+```
 Scan the QR code with the Expo Go app on your phone or run on an emulator.
 
-📁 Folder Structure (simplified)
+## 📁 Folder Structure (simplified)
 ```bash
 /components       → Reusable UI components and theme
 /screens          → App screens like Home, Summary, Scan, etc.
 /firebase         → Firebase config
 /App.js           → App root with navigation
 /theme.js         → Centralized color scheme and font styles
+```
 
 📸 Screenshots
 Add screenshots here once available (Home screen, Statistics, OCR flow, etc.)
 
 ## 🧠 Future Improvements:
-Filter/search by category or amount
+- Filter/search by category or amount
+- Budgeting goals and limits
+- Dark mode support
+- Multi-language support
 
-Budgeting goals and limits
-
-Dark mode support
-
-Multi-language support
-
-👩‍💻 Author
+## 👩‍💻 Author
 Shaked Hartal
 B.Sc. in Computer Science
