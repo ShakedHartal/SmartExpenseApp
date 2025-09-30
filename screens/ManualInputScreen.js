@@ -10,14 +10,17 @@ import {
 } from 'react-native';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
-import { theme } from '../components/theme'; // make sure path is correct
+import { theme } from '../components/theme'; 
 import AppButton from '../components/AppButton';
 
+// Screen to manually add fixed monthly expenses
 export default function ManualInputScreen() {
+  // Local state for form inputs
   const [category, setCategory] = useState('');
   const [amount, setAmount] = useState('');
   const [isRecurring, setIsRecurring] = useState(true); // default true
 
+  // Save expense into dataBase
   const handleAddExpense = async () => {
     if (!category || !amount) {
       Alert.alert('Error', 'Please fill in both fields');
@@ -27,11 +30,12 @@ export default function ManualInputScreen() {
     try {
       await addDoc(collection(db, 'fixed_expenses'), {
         category,
-        amount: parseFloat(amount),
+        amount: parseFloat(amount), // convert string to number
         isRecurring,
         createdAt: serverTimestamp(),
       });
 
+      // Reset state and show success
       Alert.alert('Success', 'Fixed expense added!');
       setCategory('');
       setAmount('');
@@ -44,8 +48,10 @@ export default function ManualInputScreen() {
 
   return (
     <View style={styles.container}>
+      {/* Screen title */}
       <Text style={styles.title}>Add Fixed Monthly Expense</Text>
 
+      {/* Input for expense category */}
       <TextInput
         style={styles.input}
         placeholder="Category (e.g., Rent)"
@@ -53,6 +59,7 @@ export default function ManualInputScreen() {
         onChangeText={setCategory}
       />
 
+      {/* Input for expense amount */}
       <TextInput
         style={styles.input}
         placeholder="Amount (USD)"
@@ -61,6 +68,7 @@ export default function ManualInputScreen() {
         onChangeText={setAmount}
       />
 
+      {/* Toggle for recurring expense */}
       <View style={styles.switchRow}>
         <Text>Recurring Monthly Expense</Text>
         <Switch
@@ -79,6 +87,7 @@ export default function ManualInputScreen() {
   );
 }
 
+// Styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,

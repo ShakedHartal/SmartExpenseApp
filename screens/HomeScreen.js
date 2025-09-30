@@ -12,14 +12,15 @@ import { theme } from '../components/theme';
 
 const windowHeight = Dimensions.get('window').height;
 
+// Home Screen component
 export default function HomeScreen({ navigation }) {
   return (
+    // Background image with soft opacity overlay
     <ImageBackground
       source={require('../assets/background.jpg')}
       style={styles.background}
       imageStyle={{ opacity: 0.1 }}
       resizeMode="cover"
-      // 👇 THIS LINE FIXES THE TOUCH ISSUE
       accessible={true}
     >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -51,6 +52,7 @@ export default function HomeScreen({ navigation }) {
   );
 }
 
+// Styles for HomeScreen
 const styles = StyleSheet.create({
   background: {
     flex: 1,
@@ -66,17 +68,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Snell Roundhand',
     color: theme.colors.text,
-    marginBottom: 160, // increase this value to add more space
+    marginBottom: 160, // increase this value to add more space between title and grid
     textAlign: 'center',
   },
   grid: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap', // wraps into 2 rows/columns
     justifyContent: 'space-between',
     width: '100%',
   },
   button: {
-    width: '48%',
+    width: '48%', // ensures 2 buttons per row
     height: 100,
     backgroundColor: theme.colors.primary,
     borderRadius: 20,
