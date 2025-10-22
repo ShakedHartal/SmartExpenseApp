@@ -64,7 +64,7 @@ Scan the QR code with the Expo Go app on your phone or run on an emulator.
 
 ## 📸 Screenshots
 <p align="center">
-  <img src="assets/screenshots/homescreen.png" alt="Home" width="15%" />
+  <img src="assets\screenshots\homescreen.png" alt="Home" width="15%" />
   <img src="assets\screenshots\manualinput.jpg" alt="Statistics" width="15%" />
   <img src="assets\screenshots\scanreceipt.jpg" alt="Statistics" width="15%" />
   <img src="assets\screenshots\stats.jpg" alt="Statistics" width="15%" />
