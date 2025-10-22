@@ -7,6 +7,7 @@ import { PieChart } from 'react-native-chart-kit';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { theme } from '../components/theme';
+import BackgroundWrapper from '../components/BackgroundWrapper';
 
 const chartColors = [
   '#f87171', '#60a5fa', '#34d399', '#fbbf24', '#a78bfa', '#f472b6',
@@ -75,6 +76,7 @@ export default function StatisticsScreen() {
   const years = [2024, 2025, 2026];
 
   return (
+    <BackgroundWrapper>
     <ScrollView style={styles.container}>
       <Text style={styles.title}>📊 Monthly Expense Breakdown</Text>
 
@@ -131,6 +133,7 @@ export default function StatisticsScreen() {
       )}
       <Text style={styles.total}>Total: ${total.toFixed(2)}</Text>
     </ScrollView>
+    </BackgroundWrapper>
   );
 }
 

@@ -12,6 +12,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 import { theme } from '../components/theme'; 
 import AppButton from '../components/AppButton';
+import BackgroundWrapper from '../components/BackgroundWrapper';
 
 // Screen to manually add fixed monthly expenses
 export default function ManualInputScreen() {
@@ -47,6 +48,7 @@ export default function ManualInputScreen() {
   };
 
   return (
+    <BackgroundWrapper>
     <View style={styles.container}>
       {/* Screen title */}
       <Text style={styles.title}>Add Fixed Monthly Expense</Text>
@@ -84,6 +86,7 @@ export default function ManualInputScreen() {
 
       <AppButton title="Add Expense" onPress={handleAddExpense} />
     </View>
+    </BackgroundWrapper>
   );
 }
 

@@ -3,6 +3,7 @@ import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from '../firebase';
 import { theme } from '../components/theme';
+import BackgroundWrapper from '../components/BackgroundWrapper';
 
 export default function ViewExpensesScreen() {
   // Holds all expenses (both one-time and fixed)
@@ -65,6 +66,7 @@ export default function ViewExpensesScreen() {
   );
 
   return (
+    <BackgroundWrapper>
     <View style={styles.container}>
       <Text style={styles.title}>📄 Your Expenses</Text>
       {loading ? (
@@ -78,6 +80,7 @@ export default function ViewExpensesScreen() {
         />
       )}
     </View>
+    </BackgroundWrapper>
   );
 }
 

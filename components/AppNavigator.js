@@ -16,6 +16,11 @@ export default function AppNavigator() {
       screenOptions={{
         headerShown: true,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // 🎉 animated transitions
+        contentStyle: { backgroundColor: 'transparent' },
+        headerTransparent: true,
+        headerStyle: { backgroundColor: 'transparent' },
+        headerTitleStyle: { color: '#000' },   // צבע טקסט הכותרת (לבחירתך)
+        headerTintColor: '#000',               // צבע לחצן Back וגו'
       }}
     >
       <Stack.Screen name="Home" component={HomeScreen} />

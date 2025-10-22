@@ -15,6 +15,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import AppButton from '../components/AppButton';
 import { theme } from '../components/theme';
 import { GOOGLE_API_KEY } from '@env';
+import BackgroundWrapper from '../components/BackgroundWrapper';
 
 export default function ScanReceiptScreen() {
   // State for image URI
@@ -142,6 +143,7 @@ export default function ScanReceiptScreen() {
   };
 
   return (
+    <BackgroundWrapper>
     <View style={styles.container}>
       <Text style={styles.title}>Scan a Receipt</Text>
 
@@ -162,6 +164,7 @@ export default function ScanReceiptScreen() {
         </View>
       )}
     </View>
+    </BackgroundWrapper>
   );
 }
 
@@ -171,7 +174,9 @@ const styles = StyleSheet.create({
     padding: 24, 
     flex: 1, 
     gap: 12, 
-    backgroundColor: theme.colors.background,
+    // backgroundColor: theme.colors.background,
+    backgroundColor: 'transparent',
+
   },
   title: { 
     fontSize: 22, 

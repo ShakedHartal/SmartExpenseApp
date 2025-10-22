@@ -17,7 +17,7 @@ export default function HomeScreen({ navigation }) {
   return (
     // Background image with soft opacity overlay
     <ImageBackground
-      source={require('../assets/background.jpg')}
+      source={require('../assets/background.png')}
       style={styles.background}
       imageStyle={{ opacity: 0.1 }}
       resizeMode="cover"

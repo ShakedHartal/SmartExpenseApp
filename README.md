@@ -62,8 +62,16 @@ Scan the QR code with the Expo Go app on your phone or run on an emulator.
 /theme.js         → Centralized color scheme and font styles
 ```
 
-📸 Screenshots
-Add screenshots here once available (Home screen, Statistics, OCR flow, etc.)
+## 📸 Screenshots
+<p align="center">
+  <img src="assets/screenshots/homescreen.png" alt="Home" width="45%" />
+  <img src="assets\screenshots\manualinput.jpg" alt="Statistics" width="45%" />
+  <img src="assets\screenshots\scanreceipt.jpg" alt="Statistics" width="45%" />
+  <img src="assets\screenshots\stats.jpg" alt="Statistics" width="45%" />
+  <img src="assets\screenshots\summarycontent.jpg" alt="Statistics" width="45%" />
+  <img src="assets\screenshots\viewexpenses.jpg" alt="Statistics" width="45%" />
+
+</p>
 
 ## 🧠 Future Improvements:
 - Filter/search by category or amount

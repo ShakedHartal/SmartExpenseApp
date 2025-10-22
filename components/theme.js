@@ -1,7 +1,8 @@
 // theme.js
 export const theme = {
   colors: {
-    background: '#F5EFE7', // warm beige
+    // background: '#F5EFE7', // warm beige
+    background: 'transparent',
     card: '#FFFFFF',       // white cards over beige background
     primary: '#D4A373',     // warm terracotta/golden accent
     secondary: '#8C674E',   // soft brown
