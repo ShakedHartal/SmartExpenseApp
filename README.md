@@ -1,6 +1,3 @@
-from pathlib import Path
-
-readme_content = """
 # 📱 Smart Expense Manager
 
 Smart Expense Manager is a mobile app built with React Native that helps users track, categorize, and analyze their expenses using manual inputs, receipt scanning, and AI insights. Designed for intuitive use, it supports both fixed and variable expenses, with smart visualizations and recommendations for saving money.
